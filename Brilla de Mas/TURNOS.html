@@ -1,0 +1,290 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="wiewport" content="width=device-width, initial-scale=1.0">
+    <title>Turnos</title>
+    <meta name="descripcion" content="limpieza de tapizados en puerto madryn">
+    <meta name="keywords"
+        content="servicio, limpieza, tapizados, colchones, alfombras, sillones, autos, asientos, sillas, puerto madryn, a domicilio">
+    <meta property="og:type" content="limpieza">
+    <meta property="og:tittle" content="limpieza de tapizados en puerto madryn">
+    <meta property="og:image"
+        content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRET-hyhT0pT0nPUiaijmJp1IZ1ucXD8iRuFg&usqp=CAU">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="img/icono.jpeg">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&family=Roboto+Condensed:wght@300&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="encabezado row col-lg-12 col-sm-12 col-xs-12 ">
+            <!-- navbar -->
+            <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+                <div class="container-fluid">
+                    <!-- Logo empresa -->
+                    <div data-aos="fade-right">
+                        <a class="  navbar-brand " href="index.html"><img src="img/iconoencabezado.png" width="100px"
+                                height="85px" animate__bounce>
+                        </a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link colornav" href="index.html"> INICIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link colornav" href="galeria.html">GALERIA</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link colornav" href="MASINFO.html">MAS INFO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link colornav"
+                                    href="https://www.google.com/maps/place/BRILLA+D%2B+%2F+LIMPIEZA+DE+TAPIZADOS/@-42.7690713,-65.0508713,17z/data=!4m16!1m7!3m6!1s0xbe0235cff4bd3ab3:0xa69bd8944d1ccf2b!2sBRILLA+D%2B+%2F+LIMPIEZA+DE+TAPIZADOS!8m2!3d-42.7690713!4d-65.0508713!16s%2Fg%2F11rrqqhrbg!3m7!1s0xbe0235cff4bd3ab3:0xa69bd8944d1ccf2b!8m2!3d-42.7690713!4d-65.0508713!9m1!1b1!16s%2Fg%2F11rrqqhrbg?entry=ttu"
+                                    target="_blank">CALIFICACIONES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link colornav" href="Login.html">INGRESAR</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+        <!-- main -->
+        <div class="imgfondo row">
+            <div class="reservadeturno col-lg-12 col-sm-12 col-xs-12">
+                <form class="formulario m-1" id="miFormulario">
+                    <h2>¡DATOS DE RESERVACION!</h2>
+                    <br>
+                    <label id="nombreLabel">Nombre y apellido:</label>
+                    <input type="text" pattern="[A-Za-z ]+" placeholder="nombre y apellido" id="nombre" required> <br>
+                    <br> <label id="domicilioLabel">Dirección del domicilio:</label>
+                    <input type="text" placeholder="dirección del domicilio" id="domicilio" required><br>
+                    <br> <label id="telefonoLabel">Número de teléfono:</label>
+                    <input type="tel" placeholder="numero celular" id="telefono" required><br>
+                    <br> <label id="emailLabel">Correo electronico - Email:</label>
+                    <input type="email" placeholder="Email" id="email" required><br><br>
+                    <br> <label id="servicioLabel">Servicio de limppieza de:</label>
+                    <select id="servicio" name="servicio">
+                        <option value="colchon1plaza">colchon 1 plaza</option>
+                        <option value="colchon2plazas">colchon 2 plazas</option>
+                        <option value="sillon2cuerpos">sillon 2 cuerpos</option>
+                        <option value="sillon3cuerpos">sillon 3 cuerpos</option>
+                        <option value="vehiculo5asientos">Vehiculo 5 asientos</option>
+                        <option value="vehiculo7asientos">Vehiculo 7 asientos</option>
+                    </select>
+                    <br>
+                    <button type="submit" id="enviar">Solicitar turno</button>
+                </form>
+            </div>
+        </div>
+        <div class="fondolista">
+            <!-- Elemento HTML para mostrar los datos ingresados -->
+            <div id="datosMostrados" class="fila"></div>
+            <button id="mostrarLista">Mostrar Reservas</button>
+            <ul id="listaReservas"></ul>
+
+        </div>
+        <!-- Footer -->
+        <footer class="bg-dark text-center text-white">
+            <!-- Grid container -->
+
+            <div class="card-footer "><br>
+                <h5 class="card-title m-1">Somos BRILLA DE MÁS</h5>
+                <p class="card-text"><em>"Invertir en limpieza, es tambien invertir en salud"</em></p>
+
+            </div>
+            <div class="container p-4  bg-dark text-center text-white  ">
+                <!-- Section: Social media -->
+                <section class="mb-4">
+                    <!-- Facebook -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/BRILLA.DE.MAS"
+                        target="_blank" role="button"><img src="img/facebook.png" width="20px"></img></a>
+
+
+                    <!-- Instagram -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><img
+                            src="img/instagram.png" width="20px"></img></a>
+
+                    <!-- Youtube -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><img src="img/youtube.png"
+                            width="20px"></img></a>
+
+                    <!-- Telegram -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><img
+                            src="img/telegram.png" width="20px"></img></a>
+
+                    <!-- whatsApp -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://wa.me/+5492804970323"
+                        target="_blank" role="button"><img src="img/whatsapp.png" width="20px"></img></a>
+
+                    <!-- GoogleMaps -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://goo.gl/maps/bsATt2vRfiqD8X1Y6"
+                        target="_blank" role="button"><img src="img/google-maps.png" width="20px"></img></a>
+
+                </section>
+                <!-- Section: Social media -->
+
+                <!-- Section: Form -->
+                <section class="">
+                    <form action="">
+                        <!--Grid row-->
+                        <div class="row d-flex justify-content-center">
+
+                            <!--Grid column-->
+                            <div class="col-auto">
+
+                            </div>
+                            <!--Grid column-->
+                        </div>
+                        <!--Grid row-->
+                    </form>
+                </section>
+                <!-- Section: Form -->
+
+                <!-- Section: Text -->
+                <section class="mb-4">
+                    <p>
+                        Somos una empresa familiar de limpieza profunda de tapizados, fundada durante la pandemia
+                        covid-19.
+                        Resolvemos de forma efectiva nuestro trabajo, contamos con un equipo apto, brindamos protección
+                        y
+                        bienestar a las familias.
+                        Te invitamos a ver nuestro trabajo durante estos años
+                    </p>
+                </section>
+                <!-- Section: Text -->
+
+                <!-- Section: Links -->
+                <section class="Pie_pagina">
+                    <!--Grid row-->
+                    <div class="row">
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                            <h5 class="text-uppercase">VEHICULOS</h5>
+
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <a href="https://m.facebook.com/story.php?story_fbid=pfbid029gRidBxvSJMHaghAiq68dcs6ULgpYDrFa11ENs7TbzYZryAhdyaXd9vpMA69vr1Dl&id=100048778263518&mibextid=Nif5oz"
+                                        target="_blank" class="text-white">Ver video </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                            <h5 class="text-uppercase">ALFOMBRAS</h5>
+
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <a href="https://m.facebook.com/story.php?story_fbid=pfbid05crwPFuDNhgxeAfYgRSuH5Q4nntCDTNxtpJ66x7xBc8QkJLWfxxja5j8YxivEfekl&id=100048778263518&mibextid=Nif5oz!"
+                                        target="_blank" class="text-white">Ver video</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                            <h5 class="text-uppercase">SILLAS</h5>
+
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <a href="https://m.facebook.com/story.php?story_fbid=pfbid0282DGwQQNhbid8WhcH8dCByTjkGigbhEQRk4H3tFiuFTSEJhBKY81y8btE28RMDdWl&id=100048778263518&mibextid=Nif5oz"
+                                        target="_blank" class="text-white">Ver video</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                            <h5 class="text-uppercase">COLCHONES</h5>
+
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <a href="https://m.facebook.com/story.php?story_fbid=pfbid0zfkJXDoZFrHQVkMMm3Jq1uUjDGjgNKCTJi81HsJGbuVApBQKaxnifNKDHsLXLdX2l&id=100048778263518&mibextid=Nif5oz"
+                                        target="_blank" class="text-white">Ver video</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </section>
+                <!-- Section: Links -->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2019 Copyright:
+                <a class="text-white" href="#!">BrillaDeMas.limpieza.com</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+
+        <!-- sweet alert -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <!-- JAVA SCRIPT -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="Entrega3.js"></script>
+        <!-- JAVA SCRIPT -->
+
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html>
