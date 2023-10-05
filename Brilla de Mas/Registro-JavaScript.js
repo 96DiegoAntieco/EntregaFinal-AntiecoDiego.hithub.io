@@ -16,7 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
       contrasena: contrasena,
       reservas: [],
     };
-    const usuarios = JSON.parse(localStorage.getItem("usuarios"));
+    let usuarios = JSON.parse(localStorage.getItem("usuarios"));
+    if (!usuarios) {
+      usuarios = [];
+    }
     usuarios.push(nuevoUsuario);
     // guardar datos en LocalStorage
     localStorage.setItem("usuarios", JSON.stringify(usuarios));

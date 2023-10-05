@@ -1,45 +1,5 @@
 const formulario = document.getElementById("miFormulario");
 
-// Objeto  servicios de limpieza
-const serviciosLimpieza = {
-  colchon1plaza: {
-    id: 1,
-    nombre: "colchon 1 plaza",
-    precio: 6000,
-    aDomicilio: true,
-  },
-  colchon2plazas: {
-    id: 2,
-    nombre: "colchon 2 plazas",
-    precio: 8500,
-    aDomicilio: true,
-  },
-  sillon2cuerpos: {
-    id: 3,
-    nombre: "sillon 2 cuerpos",
-    precio: 8000,
-    aDomicilio: true,
-  },
-  sillon3cuerpos: {
-    id: 4,
-    nombre: "sillon 3 cuerpos",
-    precio: 11000,
-    aDomicilio: true,
-  },
-  vehiculo5asientos: {
-    id: 5,
-    nombre: "Vehiculo 5 asientos",
-    precio: 9500,
-    aDomicilio: false,
-  },
-  vehiculo7asientos: {
-    id: "6",
-    nombre: "Vehiculo 7 asientos",
-    precio: 12000,
-    aDomicilio: false,
-  },
-};
-
 formulario.addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -128,7 +88,21 @@ formulario.addEventListener("submit", function (e) {
 
 //mostrar los datos del formulario SEGUN el usuario que esta activo
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async function () {
+  const respuesta = await fetch(
+    "https://api.jsonstorage.net/v1/json/08cd2520-d2e5-488d-9c5a-07c23e25b887/64e08ff6-b22a-4fa3-9e77-a4320a58ea5c"
+  );
+  const servicios = await respuesta.json();
+  const servicioSelect = document.getElementById("servicio");
+  for (const indice in servicios) {
+    const option = document.createElement("option");
+    const servicio = servicios[indice];
+    option.value = servicio.nombre + "  $" + servicio.precio;
+    option.text = servicio.nombre + "  $" + servicio.precio;
+
+    servicioSelect.add(option);
+  }
+
   const botonMostrarLista = document.getElementById("mostrarLista");
   const listaReservas = document.getElementById("listaReservas");
 
